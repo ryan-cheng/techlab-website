@@ -232,7 +232,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 }
 
 .section {
-  padding: 100px 0;
+  padding: 50px 0;
 }
 
 .section-sm {
@@ -698,8 +698,8 @@ font header .navbar-default .navbar-nav li a:hover {
 .navigation .navbar .navbar-nav > li > a {
   color: #007bff;
   padding: 10px 15px;
-  font-weight: 500;
-  font-size: 14px;
+  font-weight: bolder;
+  font-size: 16px;
   text-transform: uppercase;
 }
 
@@ -715,7 +715,7 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 
 .navigation .navbar .dropdown-menu a {
-  font-weight: normal;
+  font-weight: bold;
   color: #007bff;
   padding: 10px 20px;
   transition: all 0.3s ease;
