@@ -51,7 +51,7 @@ iframe {
 a, a:focus, a:hover {
   text-decoration: none;
   outline: 0;
-  color: #655E7A;
+  color: #007bff;
 }
 
 blockquote {
@@ -441,7 +441,7 @@ input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focu
 
 .tabCommon .nav-tabs li.active a {
   background-color: #655E7A;
-  border: 1px solid #655E7A;
+  border: 1px solid #007bff;
   color: #ffffff;
 }
 
@@ -919,9 +919,8 @@ font header .navbar-default .navbar-nav li a:hover {
 }
 
 .portfolio-work .block .portfolio-menu ul .mixitup-control-active {
-  background: #655E7A;
+  background: #007bff;
   color: #fff;
-  border: 1px solid #655E7A;
 }
 
 .portfolio-work .block .portfolio-contant ul li {
@@ -971,7 +970,7 @@ font header .navbar-default .navbar-nav li a:hover {
   bottom: 0;
   right: 0;
   left: 0;
-  background: rgba(60, 55, 55, 0.9);
+  background: rgba(0, 123, 255, 0.8);
   opacity: 0;
   transition: all 0.3s ease;
   text-align: center;
@@ -1824,7 +1823,7 @@ font header .navbar-default .navbar-nav li a:hover {
 .dashboard-menu .active {
   background: #655E7A;
   color: #fff;
-  border: 1px solid #655E7A;
+  border: 1px solid #007bff;
 }
 
 .dashboard-menu li {
@@ -2297,7 +2296,7 @@ font header .navbar-default .navbar-nav li a:hover {
 
 .post-pagination > li.active > a {
   background: #655E7A !important;
-  border: 1px solid #655E7A !important;
+  border: 1px solid #007bff !important;
 }
 
 .post-pagination > li:first-child > a, .post-pagination > li:last-child > a {

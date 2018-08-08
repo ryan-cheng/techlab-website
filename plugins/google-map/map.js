@@ -1,8 +1,9 @@
 function initMap() {
         // Styles a map in night mode.
+        var myLatLng = {lat: 37.289, lng: -122.032};
         var map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 40.674, lng: -73.945},
-          zoom: 12,
+          center: myLatLng,
+          zoom: 16,
           styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
             {elementType: 'labels.text.stroke', stylers: [{color: '#242f3e'}]},
@@ -83,5 +84,13 @@ function initMap() {
               stylers: [{color: '#17263c'}]
             }
           ]
+        });
+        var marker = new google.maps.Marker({
+          position: myLatLng,
+          map: map,
+          label: {
+              text:"Techlab Education",
+              color:"#000",
+          }
         });
       }
