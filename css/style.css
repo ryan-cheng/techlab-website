@@ -2817,7 +2817,7 @@ font header .navbar-default .navbar-nav li a:hover {
     font-size: 25px;
 }
 .classimage {
-    width:35%; 
+    width:41%; 
     vertical-align: top;
 }
 .classdescription {
@@ -2828,7 +2828,16 @@ font header .navbar-default .navbar-nav li a:hover {
     padding-top: 10px;
     font-size: 20px;
 }
-@media (max-width: 728px) {
+@media (max-width: 767px) {
+    .classtitle {
+        font-weight:bolder; 
+        margin-top: 25px; 
+        display:block; 
+        padding-left: 0px; 
+        font-size: 25px;
+    }
+}
+@media (max-width: 1200px) and (min-width:992px) {
     .classtitle {
         font-weight:bolder; 
         margin-top: 25px; 
@@ -2837,10 +2846,28 @@ font header .navbar-default .navbar-nav li a:hover {
         font-size: 25px;
     }
 }
-@media (max-width: 728px) {
+@media (max-width:900px) {
+    .classtitle {
+        font-weight:bolder; 
+        margin-top: 25px; 
+        display:block; 
+        padding-left: 0px; 
+        font-size: 25px;
+    }
+}
+@media (max-width: 767px) {
     .classimage {
         width:100%; 
         vertical-align: top;
+        margin-top:35px;
+    }
+}
+@media (max-width: 991px) {
+    .classimage {
+        vertical-align: top;
+        margin-top:35px;
+    }
+    .classtitle {
         margin-top:35px;
     }
 }

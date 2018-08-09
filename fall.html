@@ -91,68 +91,119 @@
 			<div class="col-md-1">
 				<div class="customcheckmark">
 		          <label class="customcheckmark" style="padding-left: 35px;">TYNKERER
-                  <input type="checkbox" checked="checked">
+                  <input id="tynkererfilter" type="checkbox" checked="checked" onclick="filterTynkererClasses('tynkerer')">
                   <span class="checkmark"></span>
                   </label>
                   <label class="customcheckmark" style="padding-left: 35px;">INTERMEDIATE
-                  <input type="checkbox" checked="checked">
+                  <input id="intermediatefilter" type="checkbox" checked="checked" onclick="filterIntermediateClasses('intermediate')">
                   <span class="checkmark"></span>
                   </label>
                   <label class="customcheckmark" style="padding-left: 35px;">ADVANCED
-                  <input type="checkbox" checked="checked">
+                  <input id="advancedfilter" type="checkbox" checked="checked" onclick="filterAdvancedClasses('advanced')">
                   <span class="checkmark"></span>
                   </label>
                   <label class="customcheckmark" style="padding-left: 35px;">APCS
-                  <input type="checkbox" checked="checked">
+                  <input id="apcsfilter" type="checkbox" checked="checked" onclick="filterApcsClasses('apcs')">
                   <span class="checkmark"></span>
                   </label>
 	            </div>
 			</div>
             <div class="col-md-8 col-md-offset-3">
-                <div>
+                <div id="introPath" class="tynkerer" style="display:block;">
                     <img class="classimage" src="images/arduino1.jpg">
-                    <h3 class="classtitle">INTRODUCTION TO JAVA
-                        <p class="classcategory">TYNKERER</p>
+                    <h3 class="classtitle">TYNKERER
+                        <p class="classcategory">$200/mo</p>
+                        <p class="classdescription">Explore and establish the fundamentals in technology</p>
                         <p class="classdescription">5th-7th Grade</p>
                         <p class="classdescription">Once a Month</p>
-                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">ENROLL</button>
+                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;" onclick="enrollClass('introEnrollInfo')">ENROLL</button>
                     </h3>
+                    <div id="introEnrollInfo" style="display: none;">
+                        <form id="tynkerer-form" >
+                            <div class="form-group">
+                                <input name="user_name" type="text" class="form-control" placeholder="Student Name">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_age" type="text" class="form-control" placeholder="Student Age">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button class="btn btn-main" type="submit" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">PROCEED</button>
+                        </form>
+                    </div>
                 </div>
-                <div style="padding-top:25px;">
+                <div id="intermediatePath" class="intermediate" style="padding-top:25px; display: block;">
                     <img class="classimage" src="images/arduino1.jpg">
-                    <h3 class="classtitle">INTRODUCTION TO JAVA
-                        <p class="classcategory">TYNKERER</p>
-                        <p class="classdescription">5th-7th Grade</p>
+                    <h3 class="classtitle">INTERMEDIATE
+                        <p class="classcategory">$200/mo</p>
+                        <p class="classdescription">Develop deeper knowledge in Computers, Algorithms</p>
+                        <p class="classdescription">6th-8th Grade</p>
                         <p class="classdescription">Once a Month</p>
-                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">ENROLL</button>
+                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;" onclick="enrollClass('intermediateEnrollInfo')">ENROLL</button>
                     </h3>
+                    <div id="intermediateEnrollInfo" style="display: none;">
+                        <form id="intermediate-form" >
+                            <div class="form-group">
+                                <input name="user_name" type="text" class="form-control" placeholder="Student Name">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_age" type="text" class="form-control" placeholder="Student Age">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button class="btn btn-main" type="submit" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">PROCEED</button>
+                        </form>
+                    </div>
                 </div>
-                <div style="padding-top:25px;">
+                <div id="advancedPath" class="advanced" style="padding-top:25px; display: block;">
                     <img class="classimage" src="images/arduino1.jpg">
-                    <h3 class="classtitle">INTRODUCTION TO JAVA
-                        <p class="classcategory">TYNKERER</p>
-                        <p class="classdescription">5th-7th Grade</p>
+                    <h3 class="classtitle">ADVANCED
+                        <p class="classcategory">$300/mo</p>
+                        <p class="classdescription">Build towards APCS, Hackathons, Independent Projects</p>
+                        <p class="classdescription">8th-12th Grade</p>
                         <p class="classdescription">Once a Month</p>
-                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">ENROLL</button>
+                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;" onclick="enrollClass('advancedEnrollInfo')">ENROLL</button>
                     </h3>
+                    <div id="advancedEnrollInfo" style="display: none;">
+                        <form id="advanced-form" >
+                            <div class="form-group">
+                                <input name="user_name" type="text" class="form-control" placeholder="Student Name">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_age" type="text" class="form-control" placeholder="Student Age">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button class="btn btn-main" type="submit" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">PROCEED</button>
+                        </form>
+                    </div>
                 </div>
-                <div style="padding-top:25px;">
+                <div id="apcsPath" class="apcs" style="padding-top:25px; display: block;">
                     <img class="classimage" src="images/arduino1.jpg">
-                    <h3 class="classtitle">INTRODUCTION TO JAVA
-                        <p class="classcategory">TYNKERER</p>
-                        <p class="classdescription">5th-7th Grade</p>
+                    <h3 class="classtitle">APCS
+                        <p class="classcategory">$300/mo</p>
+                        <p class="classdescription">Prepare for the AP Computer Science Course and Test</p>
+                        <p class="classdescription">Enrolled in APCS</p>
                         <p class="classdescription">Once a Month</p>
-                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">ENROLL</button>
+                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;" onclick="enrollClass('apcsEnrollInfo')">ENROLL</button>
                     </h3>
-                </div>
-                <div style="padding-top:25px;">
-                    <img class="classimage" src="images/arduino1.jpg">
-                    <h3 class="classtitle">INTRODUCTION TO JAVA
-                        <p class="classcategory">TYNKERER</p>
-                        <p class="classdescription">5th-7th Grade</p>
-                        <p class="classdescription">Once a Month</p>
-                        <button class="btn btn-main" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">ENROLL</button>
-                    </h3>
+                    <div id="apcsEnrollInfo" style="display: none;">
+                        <form id="apcs-form">
+                            <div class="form-group">
+                                <input name="user_name" type="text" class="form-control" placeholder="Student Name">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_age" type="text" class="form-control" placeholder="Student Age">
+                            </div>
+                            <div class="form-group">
+                                <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            </div>
+                            <button class="btn btn-main" type="submit" style="background-color:#007bff; color:#fff; font-size: 16px; width:200px;padding:7px;">PROCEED</button>
+                        </form>
+                    </div>
                 </div>
 			</div>
 		</div>

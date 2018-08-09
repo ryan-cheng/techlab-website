@@ -3,7 +3,7 @@ $(document).ready(function(){
 
 
 
-    $('#contact-form').validate({
+    $('#tynkerer-form').validate({
      rules: {
       user_name: {
          required: true,
@@ -19,6 +19,9 @@ $(document).ready(function(){
       user_message: {
          required: true,
       },
+      user_age: {
+         required: true,
+      },
      },
      messages: {
       user_name: {
@@ -32,6 +35,165 @@ $(document).ready(function(){
          required: "Put some messages here?",
          minlength: "Your name must consist of at least 2 characters"
       },
+      user_age: {
+         required: "Please put your age.",
+      },  
+
+     },
+     submitHandler: function(form) {
+      $(form).ajaxSubmit({
+         type:"POST",
+         data: $(form).serialize(),
+         url:"sendmail.php",
+         success: function() {
+            $('#contact-form #success').fadeIn();
+         },
+         error: function() {
+
+            $('#contact-form #error').fadeIn();
+         }
+      });
+   }});
+    
+    $('#intermediate-form').validate({
+     rules: {
+      user_name: {
+         required: true,
+         minlength: 4
+      },
+      user_email: {
+         required: true,
+         email:true
+      },
+      user_subject: {
+         required: false,
+      },
+      user_message: {
+         required: true,
+      },
+      user_age: {
+         required: true,
+      },
+     },
+     messages: {
+      user_name: {
+         required: "Come on, you have a name don't you?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_email: {
+         required: "Please put your email address",
+      },
+      user_message: {
+         required: "Put some messages here?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_age: {
+         required: "Please put your age.",
+      },  
+
+     },
+     submitHandler: function(form) {
+      $(form).ajaxSubmit({
+         type:"POST",
+         data: $(form).serialize(),
+         url:"sendmail.php",
+         success: function() {
+            $('#contact-form #success').fadeIn();
+         },
+         error: function() {
+
+            $('#contact-form #error').fadeIn();
+         }
+      });
+   }});
+    
+    $('#advanced-form').validate({
+     rules: {
+      user_name: {
+         required: true,
+         minlength: 4
+      },
+      user_email: {
+         required: true,
+         email:true
+      },
+      user_subject: {
+         required: false,
+      },
+      user_message: {
+         required: true,
+      },
+      user_age: {
+         required: true,
+      },
+     },
+     messages: {
+      user_name: {
+         required: "Come on, you have a name don't you?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_email: {
+         required: "Please put your email address",
+      },
+      user_message: {
+         required: "Put some messages here?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_age: {
+         required: "Please put your age.",
+      },  
+
+     },
+     submitHandler: function(form) {
+      $(form).ajaxSubmit({
+         type:"POST",
+         data: $(form).serialize(),
+         url:"sendmail.php",
+         success: function() {
+            $('#contact-form #success').fadeIn();
+         },
+         error: function() {
+
+            $('#contact-form #error').fadeIn();
+         }
+      });
+   }});
+    
+    $('#apcs-form').validate({
+     rules: {
+      user_name: {
+         required: true,
+         minlength: 4
+      },
+      user_email: {
+         required: true,
+         email:true
+      },
+      user_subject: {
+         required: false,
+      },
+      user_message: {
+         required: true,
+      },
+      user_age: {
+         required: true,
+      },
+     },
+     messages: {
+      user_name: {
+         required: "Come on, you have a name don't you?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_email: {
+         required: "Please put your email address",
+      },
+      user_message: {
+         required: "Put some messages here?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_age: {
+         required: "Please put your age.",
+      },  
 
      },
      submitHandler: function(form) {
@@ -49,8 +211,58 @@ $(document).ready(function(){
       });
    }});
 
+    $('#contact-form').validate({
+     rules: {
+      user_name: {
+         required: true,
+         minlength: 4
+      },
+      user_email: {
+         required: true,
+         email:true
+      },
+      user_subject: {
+         required: false,
+      },
+      user_message: {
+         required: true,
+      },
+      user_age: {
+         required: true,
+      },
+     },
+     messages: {
+      user_name: {
+         required: "Come on, you have a name don't you?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_email: {
+         required: "Please put your email address",
+      },
+      user_message: {
+         required: "Put some messages here?",
+         minlength: "Your name must consist of at least 2 characters"
+      },
+      user_age: {
+         required: "Please put your age.",
+      },  
 
+     },
+     submitHandler: function(form) {
+      $(form).ajaxSubmit({
+         type:"POST",
+         data: $(form).serialize(),
+         url:"sendmail.php",
+         success: function() {
+            $('#contact-form #success').fadeIn();
+         },
+         error: function() {
 
+            $('#contact-form #error').fadeIn();
+         }
+      });
+   }});
+    
 	// Mix It Up Activation
 	var portfolio_item = $('.portfolio-contant-active');
 	if (portfolio_item.length) {
@@ -151,6 +363,76 @@ if(google_map_canvas.length) {
 
 });
 
-
+function filterTynkererClasses(className){
+    var checkBox = document.getElementById("tynkererfilter");
+    
+    var elements = document.getElementsByClassName(className);
+    if(checkBox.checked == true) {
+        document.getElementById("intermediatePath").style.paddingTop = '25px';
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'block';
+        }
+    }
+    if(checkBox.checked == false) {
+        document.getElementById("intermediatePath").style.paddingTop = '0px';
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'none';
+        }
+    }
+}
+function filterIntermediateClasses(className){
+    var checkBox2 = document.getElementById("intermediatefilter");
+    
+    var elements = document.getElementsByClassName(className);
+    if(checkBox2.checked == true) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'block';
+        }
+    }
+    if(checkBox2.checked == false) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'none';
+        }
+    }
+}
+function filterAdvancedClasses(className){
+    var checkBox = document.getElementById("advancedfilter");
+    
+    var elements = document.getElementsByClassName(className);
+    if(checkBox.checked == true) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'block';
+        }
+    }
+    if(checkBox.checked == false) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'none';
+        }
+    }
+}
+function filterApcsClasses(className){
+    var checkBox = document.getElementById("apcsfilter");
+    
+    var elements = document.getElementsByClassName(className);
+    if(checkBox.checked == true) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'block';
+        }
+    }
+    if(checkBox.checked == false) {
+        for(var i = 0, length = elements.length; i < length; i++) {
+              elements[i].style.display = 'none';
+        }
+    }
+}
+function enrollClass(idName) {
+    var enrollInfo = document.getElementById(idName);
+    if (enrollInfo.style.display == "none") {
+        enrollInfo.style.display = "block";
+    }
+    else {
+        enrollInfo.style.display = "none";
+    }
+}
 
 
