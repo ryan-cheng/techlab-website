@@ -37,7 +37,7 @@ $(document).ready(function(){
       },
       user_age: {
          required: "Please put your age.",
-      },  
+      },
 
      },
      submitHandler: function(form) {
@@ -54,7 +54,7 @@ $(document).ready(function(){
          }
       });
    }});
-    
+
     $('#intermediate-form').validate({
      rules: {
       user_name: {
@@ -89,7 +89,7 @@ $(document).ready(function(){
       },
       user_age: {
          required: "Please put your age.",
-      },  
+      },
 
      },
      submitHandler: function(form) {
@@ -106,7 +106,7 @@ $(document).ready(function(){
          }
       });
    }});
-    
+
     $('#advanced-form').validate({
      rules: {
       user_name: {
@@ -141,7 +141,7 @@ $(document).ready(function(){
       },
       user_age: {
          required: "Please put your age.",
-      },  
+      },
 
      },
      submitHandler: function(form) {
@@ -158,7 +158,7 @@ $(document).ready(function(){
          }
       });
    }});
-    
+
     $('#apcs-form').validate({
      rules: {
       user_name: {
@@ -193,7 +193,7 @@ $(document).ready(function(){
       },
       user_age: {
          required: "Please put your age.",
-      },  
+      },
 
      },
      submitHandler: function(form) {
@@ -245,7 +245,7 @@ $(document).ready(function(){
       },
       user_age: {
          required: "Please put your age.",
-      },  
+      },
 
      },
      submitHandler: function(form) {
@@ -262,7 +262,7 @@ $(document).ready(function(){
          }
       });
    }});
-    
+
 	// Mix It Up Activation
 	var portfolio_item = $('.portfolio-contant-active');
 	if (portfolio_item.length) {
@@ -319,7 +319,7 @@ $(document).ready(function(){
   		tCounter: '<span class="mfp-counter">%curr% of %total%</span>',
 		zoom: {
 		    enabled: true,
-		    duration: 300, 
+		    duration: 300,
 		    easing: 'ease-in-out',
 		    opener: function(openerElement) {
 		      return openerElement.is('img') ? openerElement : openerElement.find('img');
@@ -350,7 +350,7 @@ if(google_map_canvas.length) {
 
 
 
-
+document.getElementById("contact-form").addEventListener("submit", createContact);
 
 
 	// Counter
@@ -365,7 +365,7 @@ if(google_map_canvas.length) {
 
 function filterTynkererClasses(className){
     var checkBox = document.getElementById("tynkererfilter");
-    
+
     var elements = document.getElementsByClassName(className);
     if(checkBox.checked == true) {
         document.getElementById("intermediatePath").style.paddingTop = '25px';
@@ -382,7 +382,7 @@ function filterTynkererClasses(className){
 }
 function filterIntermediateClasses(className){
     var checkBox2 = document.getElementById("intermediatefilter");
-    
+
     var elements = document.getElementsByClassName(className);
     if(checkBox2.checked == true) {
         for(var i = 0, length = elements.length; i < length; i++) {
@@ -397,7 +397,7 @@ function filterIntermediateClasses(className){
 }
 function filterAdvancedClasses(className){
     var checkBox = document.getElementById("advancedfilter");
-    
+
     var elements = document.getElementsByClassName(className);
     if(checkBox.checked == true) {
         for(var i = 0, length = elements.length; i < length; i++) {
@@ -412,7 +412,7 @@ function filterAdvancedClasses(className){
 }
 function filterApcsClasses(className){
     var checkBox = document.getElementById("apcsfilter");
-    
+
     var elements = document.getElementsByClassName(className);
     if(checkBox.checked == true) {
         for(var i = 0, length = elements.length; i < length; i++) {
@@ -434,5 +434,3 @@ function enrollClass(idName) {
         enrollInfo.style.display = "none";
     }
 }
-
-

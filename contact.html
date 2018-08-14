@@ -2,12 +2,12 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> 
+<!--[if gt IE 8]><!-->
 <html class="no-js"> <!--<![endif]-->
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="description" content="Aviato E-Commerce Template">
-  
+
   <meta name="author" content="Themefisher.com">
 
   <title>Techlab Education</title>
@@ -28,7 +28,7 @@
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick.css">
   <link rel="stylesheet" href="plugins/slick-carousel/slick/slick-theme.css">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu:400,700" rel="stylesheet">
-  
+
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 
@@ -89,22 +89,22 @@
             <form id="contact-form" >
                 <div class="col-md-6 col-sm-12">
                     <div class="block">
-                        
+
                         <div class="form-group">
-                            <input name="user_name" type="text" class="form-control" placeholder="Your Name">
+                            <input name="user_name" id="contact_user_name" type="text" class="form-control" placeholder="Your Name">
                         </div>
                         <div class="form-group">
-                            <input name="user_email" type="text" class="form-control" placeholder="Email Address">
+                            <input name="user_email" id="contact_user_email" type="text" class="form-control" placeholder="Email Address">
                         </div>
                         <div class="form-group">
-                            <input name="user_subject" type="text" class="form-control" placeholder="Subject">
+                            <input name="user_subject" id="contact_subject" type="text" class="form-control" placeholder="Subject">
                         </div>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12">
                     <div class="block">
                         <div class="form-group-2">
-                            <textarea name="user_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
+                            <textarea name="user_message" id="contact_message" class="form-control" rows="3" placeholder="Your Message"></textarea>
                         </div>
                             <button class="btn btn-main" type="submit" style="background-color: #007bff">Send Message</button>
                     </div>
@@ -171,14 +171,17 @@
 		</div>
 	</div>
 </footer>
-    <!-- 
+    <!--
     Essential Scripts
     =====================================-->
-    
+
+    <!-- FIREBASE -->
+    <script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+    <script src="js/firebase.js"></script>
     <!-- <script src="js/jquery.counterup.js"></script> -->
-    
+
     <!-- Main jQuery -->
-   
+
     <script src="https://code.jquery.com/jquery-git.min.js"></script>
     <!-- Bootstrap 3.1 -->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
@@ -197,13 +200,13 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
 
 
-    
+
     <!-- Google Map -->
     <script src="plugins/google-map/map.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkeLMlsiwzp6b3Gnaxd86lvakimwGA6UA&callback=initMap"></script>
 
     <script src="js/script.js"></script>
-    
+
 
 
 
